@@ -1,0 +1,25 @@
+# To compile the simple ROS publisher/subscriber example, run the following:
+# for reference: http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29
+
+cd ~/git/bro-bot/
+source devel/setup.bash
+catkin_make
+
+# Terminal 1:
+roscore
+
+# Terminal 2:
+
+rosrun example_package talker
+
+# Or you can simply run the talker binary as you would any normal executable
+cd ~/git/bro-bot/devel/lib/example_package 
+./talker
+
+# Terminal 3:
+
+rosrun example_package listener
+
+# Or you can simply run the listener binary as you would any normal executable
+cd ~/git/bro-bot/devel/lib/example_package 
+./listener
